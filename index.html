@@ -166,5 +166,18 @@
     <p>Questionnaires : <span class="coming-soon">Prochainement</span></p>
     <p>Guide de correction : <span class="coming-soon">Prochainement</span></p>
   </div>
+
+<script>
+let buffer = '';
+document.addEventListener('keydown', function(event) {
+  buffer += event.key.toUpperCase();
+  if (buffer.includes('CE1D')) {
+    window.location.href = 'aa.html';
+    buffer = ''; // reset après redirection
+  }
+  if (buffer.length > 10) buffer = buffer.slice(-10); // garde un buffer court
+});
+</script>
+
 </body>
 </html>
